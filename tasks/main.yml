@@ -1,0 +1,12 @@
+---
+- name: Install  targetcli package
+  package:
+    name:
+      - targetcli
+    state: present
+
+- name: start  systemd unit
+  systemd:
+    name: target
+    enabled: yes
+    state: started
